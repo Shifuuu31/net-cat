@@ -1,8 +1,8 @@
 package server
 
 import (
-	"bufio"
 	"fmt"
+	"io"
 	"log"
 	"net"
 	"os"
@@ -15,21 +15,21 @@ var (
 	Clients    = make(map[net.Conn]string)
 	Messages   = []string{}
 	Mutex      = &sync.Mutex{}
-	MaxClients = 4
+	MaxClients = 10               
 )
 
 const (
-	welcomeMsg = "Welcome to TCP-Chat!\n         _nnnn_\n        dGGGGMMb\n       @p~qp~~qMb\n       M|@||@) M|\n       @,----.JM|\n      JS^\\__/  qKL\n     dZP        qKRb\n    dZP          qKKb\n   fZP            SMMb\n   HZM            MMMM\n   FqM            MMMM\n __| \".        |\\dS\"qML\n |    `.       | `' \\Zq\n_)      \\.___.,|     .'\n\\____   )MMMMMP|   .'\n     `-'       `--'\n[ENTER YOUR NAME]: "
+	welcomeMsg = "Welcome to TCP-Chat!\n         _nnnn_\n        dGGGGMMb\n       @p~qp~~qMb\n       M|@||@) M|\n       @,----.JM|\n      JS^\\__/  qKL\n     dZP        qKRb\n    dZP          qKKb\n   fZP            SMMb\n   HZM            MMMM\n   FqM            MMMM\n __| \".        |\\dS\"qML\n |    `.       | `' \\Zq\n_)      \\.___.,|     .'\n\\____   )MMMMMP|   .'\n     `-'       `--'"
 )
 
 func StartupServer() net.Listener {
-	argCount := len(os.Args[1:])
-	if argCount > 1 {
+	if len(os.Args) > 2 {
 		fmt.Println("[USAGE]: ./TCPChat $port")
-		os.Exit(0)
+		os.Exit(1)
 	}
+
 	port := "8989"
-	if argCount == 1 {
+	if len(os.Args) == 2 {
 		port = os.Args[1]
 	}
 
@@ -45,67 +45,104 @@ func StartupServer() net.Listener {
 func Run() {
 	listener := StartupServer()
 	for {
-		connection, err := listener.Accept()
+		clientConn, err := listener.Accept()
 		if err != nil {
 			log.Println("Error accepting connection:", err)
 			continue
 		}
+
 		if len(Clients) >= MaxClients {
-			fmt.Fprintf(connection, "Max Clients reached. New connections will be rejected.")
-			connection.Close()
+			clientConn.Write([]byte("\nMax clients reached. Connection rejected.\n"))
+			clientConn.Close()
 			continue
 		}
 
-		go HandleClient(connection)
+		go HandleClient(clientConn)
 	}
 }
 
-func HandleClient(connection net.Conn) {
-	defer connection.Close()
-
-	connection.Write([]byte(welcomeMsg))
-
-	// fmt.Fprintf(connection, welcomeMsg)
-
-	scanner := bufio.NewScanner(connection)
-	scanner.Scan()
-
-	name := AssignRandomColor(strings.TrimSpace(scanner.Text()))
-	if name == "" {
-		connection.Write([]byte("Name cannot be empty. Please cisConnectionect and try again.\n"))
-		return
-	}
+func BackupHistory(clientConn net.Conn) {
 	Mutex.Lock()
-	Clients[connection] = name
-	Mutex.Unlock()
-
-	NotifyClients(name + " has joined the chat...")
-
-	Mutex.Lock()
+	defer Mutex.Unlock()
 	for _, msg := range Messages {
-		fmt.Fprintf(connection, "%s\n", msg)
+		clientConn.Write([]byte(msg + "\n"))
 	}
-	Mutex.Unlock()
+}
 
-	for scanner.Scan() {
-		message := scanner.Text()
-		if message == "" {
-			continue
+func IsAlphaNum(r rune) bool {
+	return (r >= 'A' && r <= 'Z') || (r >= 'a' && r <= 'z') || (r >= '0' && r <= '9')
+}
+
+func IsValidName(name string) bool {
+	if name == "" {
+		return false
+	}
+	for _, r := range name {
+		if !IsAlphaNum(r) {
+			return false
+		}
+	}
+	return true
+}
+
+func GetClientName(clientConn net.Conn) string {
+	clientConn.Write([]byte(welcomeMsg))
+	buf := make([]byte, 256)
+
+	for {
+		clientConn.Write([]byte("\n[ENTER YOUR NAME]: "))
+		n, err := clientConn.Read(buf)
+		if err != nil {
+			log.Printf("Error reading client name: %v\n", err)
+			return ""
 		}
 
-		timestamp := time.Now().Format("2006-01-02 15:04:05")
-		formattedMessage := fmt.Sprintf("[%s][%s]: %s", timestamp, name, message)
+		name := strings.TrimSpace(string(buf[:n]))
+		if IsValidName(name) {
+			return AssignRandomColor(name)
+		}
+		clientConn.Write([]byte("\nInvalid name. Names must be alphanumeric and non-empty. Please try again.\n"))
+	}
+}
 
+func HandleClient(clientConn net.Conn) {
+	defer func() {
 		Mutex.Lock()
-		Messages = append(Messages, formattedMessage)
+		delete(Clients, clientConn)
 		Mutex.Unlock()
+		clientConn.Close()
+	}()
 
-		NotifyClients(formattedMessage)
+	name := GetClientName(clientConn)
+	if name == "" {
+		return
 	}
 
 	Mutex.Lock()
-	delete(Clients, connection)
+	Clients[clientConn] = name
 	Mutex.Unlock()
 
-	NotifyClients(name + " has left the chat...")
+	NotifyClients(name, "has joined the chat...")
+	BackupHistory(clientConn)
+
+	buf := make([]byte, 4096)
+	for {
+
+		n, err := clientConn.Read(buf)
+		if err != nil {
+			if err != io.EOF {
+				log.Printf("Error reading from client %s: %v\n", name, err)
+			}
+			break
+		}
+
+		clientConn.Write([]byte("\nenter your message: "))
+		message := strings.TrimSpace(string(buf[:n]))
+		if message != "" {
+			timestamp := time.Now().Format("2006-01-02 15:04:05")
+			SendClientMessage(name, message, timestamp)
+		}
+	}
+
+	NotifyClients(name, "has left the chat...")
 }
