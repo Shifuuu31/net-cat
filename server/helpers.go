@@ -2,58 +2,54 @@ package server
 
 import (
 	"fmt"
-	"math/rand"
+	"net"
 	"sync"
-	"time"
 )
 
 var (
-	colors         = []string{"\033[31m", "\033[32m", "\033[33m", "\033[34m", "\033[35m", "\033[36m", "\033[37m"}
-	assignedColors = map[string]string{}
-	colorMutex     = &sync.Mutex{}
+	colors     = []string{"\033[31m", "\033[32m", "\033[33m", "\033[34m", "\033[35m", "\033[36m", "\033[37m"}
+	colorMutex = &sync.Mutex{}
 )
 
-// AssignRandomColor assigns a unique color to a client
-func AssignRandomColor(input string) string {
+func AssignColor(input string) string {
 	colorMutex.Lock()
 	defer colorMutex.Unlock()
-
-	if color, exists := assignedColors[input]; exists {
-		return fmt.Sprintf("%s%s\033[0m", color, input)
+	n := len(Clients)
+	if n+1 > len(colors) {
+		return input
 	}
-
-	rand.Seed(time.Now().UnixNano())
-	color := colors[rand.Intn(len(colors))]
-	assignedColors[input] = color
-	return fmt.Sprintf("%s%s\033[0m", color, input)
+	return fmt.Sprintf("%s%s\033[0m", colors[n], input)
 }
 
-// SendClientMessage broadcasts a message to all clients except the sender
 func SendClientMessage(sender, message, timestamp string) {
 	formattedMsg := fmt.Sprintf("[%s][%s]: %s", timestamp, sender, message)
-
+	resetter := "\r\033[K"
 	Mutex.Lock()
 	Messages = append(Messages, formattedMsg)
+	fmt.Println(formattedMsg)
 	for clientConn, clientName := range Clients {
 		if clientName != sender {
-			clientConn.Write([]byte(formattedMsg+"\n"))
+			clientConn.Write([]byte(resetter+formattedMsg))
+			clientConn.Write([]byte("\n[h1]enter your message: "))
 		}
+		// fmt.Println(clientConn.LocalAddr())
 	}
 	Mutex.Unlock()
 }
 
-// NotifyClients sends a notification (e.g., join/leave messages) to all clients
-func NotifyClients(name, action string) {
-	notification := fmt.Sprintf("\n%s %s\n", name, action)
+func NotifyClients(name, action string, restrictConn net.Conn) {
+	notification := "\r\033[K" + name + action
 	Mutex.Lock()
 	defer Mutex.Unlock()
 
 	for clientConn := range Clients {
 		clientConn.Write([]byte(notification))
+		if clientConn != restrictConn {
+			clientConn.Write([]byte("\r\033[K[h2|r]enter your message: "))
+		}
 	}
 }
 
-// PrintBanner displays a startup banner
 func PrintBanner(port string) {
 	fmt.Printf("\033[1;32m\nTCPChat SERVER STATUS: 🟢 LIVE\n-> Server started on: localhost:%s\n-> Listening on the port: %s\033[0m\n", port, port)
 }

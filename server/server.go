@@ -15,7 +15,7 @@ var (
 	Clients    = make(map[net.Conn]string)
 	Messages   = []string{}
 	Mutex      = &sync.Mutex{}
-	MaxClients = 10               
+	MaxClients = 10
 )
 
 const (
@@ -52,7 +52,7 @@ func Run() {
 		}
 
 		if len(Clients) >= MaxClients {
-			clientConn.Write([]byte("\nMax clients reached. Connection rejected.\n"))
+			clientConn.Write([]byte("Max clients reached. Connection rejected.\n"))
 			clientConn.Close()
 			continue
 		}
@@ -65,7 +65,7 @@ func BackupHistory(clientConn net.Conn) {
 	Mutex.Lock()
 	defer Mutex.Unlock()
 	for _, msg := range Messages {
-		clientConn.Write([]byte(msg + "\n"))
+		clientConn.Write([]byte(msg+"\n"))
 	}
 }
 
@@ -93,15 +93,15 @@ func GetClientName(clientConn net.Conn) string {
 		clientConn.Write([]byte("\n[ENTER YOUR NAME]: "))
 		n, err := clientConn.Read(buf)
 		if err != nil {
-			log.Printf("Error reading client name: %v\n", err)
+			log.Printf("Error reading client name: %v", err)
 			return ""
 		}
 
 		name := strings.TrimSpace(string(buf[:n]))
 		if IsValidName(name) {
-			return AssignRandomColor(name)
+			return AssignColor(name)
 		}
-		clientConn.Write([]byte("\nInvalid name. Names must be alphanumeric and non-empty. Please try again.\n"))
+		clientConn.Write([]byte("Invalid name. Names must be alphanumeric and non-empty. Please try again."))
 	}
 }
 
@@ -109,6 +109,7 @@ func HandleClient(clientConn net.Conn) {
 	defer func() {
 		Mutex.Lock()
 		delete(Clients, clientConn)
+		clientConn.Write([]byte("your disconnected"))
 		Mutex.Unlock()
 		clientConn.Close()
 	}()
@@ -122,8 +123,9 @@ func HandleClient(clientConn net.Conn) {
 	Clients[clientConn] = name
 	Mutex.Unlock()
 
-	NotifyClients(name, "has joined the chat...")
+	NotifyClients(name, " has joined the chat...", clientConn)
 	BackupHistory(clientConn)
+	clientConn.Write([]byte("\n[s1]enter your message: "))
 
 	buf := make([]byte, 4096)
 	for {
@@ -131,18 +133,19 @@ func HandleClient(clientConn net.Conn) {
 		n, err := clientConn.Read(buf)
 		if err != nil {
 			if err != io.EOF {
-				log.Printf("Error reading from client %s: %v\n", name, err)
+				log.Printf("Error reading from client %s: %v", name, err)
 			}
 			break
 		}
 
-		clientConn.Write([]byte("\nenter your message: "))
 		message := strings.TrimSpace(string(buf[:n]))
 		if message != "" {
 			timestamp := time.Now().Format("2006-01-02 15:04:05")
 			SendClientMessage(name, message, timestamp)
 		}
+		clientConn.Write([]byte("[s2]enter your message: "))
+
 	}
 
-	NotifyClients(name, "has left the chat...")
+	NotifyClients(name, " has left the chat...", clientConn)
 }
