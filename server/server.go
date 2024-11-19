@@ -39,6 +39,9 @@ func StartupServer() net.Listener {
 	}
 
 	PrintBanner(port)
+	fmt.Println(listener.Addr())
+	fmt.Println(listener.Addr().Network())
+	fmt.Println(listener.Addr().String())
 	return listener
 }
 
@@ -64,8 +67,9 @@ func Run() {
 func BackupHistory(clientConn net.Conn) {
 	Mutex.Lock()
 	defer Mutex.Unlock()
+	clientConn.Write([]byte("\n"))
 	for _, msg := range Messages {
-		clientConn.Write([]byte(msg+"\n"))
+		clientConn.Write([]byte(msg + "\n"))
 	}
 }
 
@@ -85,6 +89,19 @@ func IsValidName(name string) bool {
 	return true
 }
 
+func IsClientNameExists(name string) bool {
+	Mutex.Lock()
+	defer Mutex.Unlock()
+
+	for _, clientName := range Clients {
+		if clientName[5:10] == name {
+			fmt.Printf("\n[%s] | [%s]\n", name, clientName[5:10])
+			return true
+		}
+	}
+	return false
+}
+
 func GetClientName(clientConn net.Conn) string {
 	clientConn.Write([]byte(welcomeMsg))
 	buf := make([]byte, 256)
@@ -98,10 +115,15 @@ func GetClientName(clientConn net.Conn) string {
 		}
 
 		name := strings.TrimSpace(string(buf[:n]))
-		if IsValidName(name) {
+		if !IsValidName(name) {
+			clientConn.Write([]byte("Invalid name. Names must be alphanumeric and non-empty. Please try again."))
+		}else if IsClientNameExists(name) {
+			clientConn.Write([]byte("\033[31m"+ name + "\033[0m already taken, try again"))
+		}else {
 			return AssignColor(name)
 		}
-		clientConn.Write([]byte("Invalid name. Names must be alphanumeric and non-empty. Please try again."))
+		// if GetClientName(clientConn) == ""
+		
 	}
 }
 
