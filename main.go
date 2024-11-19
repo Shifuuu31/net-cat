@@ -1,6 +1,8 @@
 package main
 
-import "TCPChat/server"
+import (
+	"TCPChat/internal/server"
+)
 
 func main() {
 	server.Run()
