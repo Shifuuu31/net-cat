@@ -8,26 +8,22 @@ import (
 	"TCPChat/internal/utils"
 )
 
+func isAlphaNum(r rune) bool {
+	return (r >= 'A' && r <= 'Z') || (r >= 'a' && r <= 'z') || (r >= '0' && r <= '9')
+}
 
 func isValidName(name string) bool {
 	if name == "" || len(name) < 3 {
 		return false
 	}
 
-	hasLetter := false
-	hasNumber := false
 	for _, r := range name {
-		if r >= 'A' && r <= 'Z' || r >= 'a' && r <= 'z' {
-			hasLetter = true
-		} else if r >= '0' && r <= '9' {
-			hasNumber = true
-		} else {
+		if !isAlphaNum(r) {
 			return false
 		}
 	}
-	return hasLetter && hasNumber
+	return true
 }
-
 
 func BackupHistory(clientConn net.Conn) {
 	Mutex.Lock()

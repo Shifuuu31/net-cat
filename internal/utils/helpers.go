@@ -30,6 +30,7 @@ func Get(filename string) string {
 	return string(readed)
 }
 
+
 func Save(filename, content string, islog bool) {
 	file, err := os.OpenFile(filename, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0o600)
 	if err != nil {

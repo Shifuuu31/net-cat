@@ -19,15 +19,14 @@ func NotifyClients(name, action, timestamp string, restrictConn net.Conn) {
 		_, err := clientConn.Write([]byte(notification))
 		if err != nil {
 			fmt.Errorf(err.Error())
-			// utils.Save("./internal/logs/logs.log", err.Error())
+			utils.Save("./internal/logs/logs.log", err.Error(), true)
 		}
 		if clientConn != restrictConn {
-			_, err := clientConn.Write([]byte("\nBB[" + timestamp + "][" + clientName + "]: "))
+			_, err := clientConn.Write([]byte("\n[" + timestamp + "][" + clientName + "]: "))
 			if err != nil {
 				fmt.Errorf(err.Error())
-				// utils.Save("./internal/logs/logs.log", err.Error())
+				utils.Save("./internal/logs/logs.log", err.Error(), true)
 			}
-			// n, err := clientConn.Write([]byte("\n"+name+action))
 		}
 	}
 }

@@ -1,26 +1,633 @@
-[2024-11-20 13:42:22] [ERROR] Failed to open file: open ./internal/db/archived_msgs: no such file or directory
-[2024-11-20 13:42:42] [ERROR] Failed to open file: open ./internal/db/archived_msgs: no such file or directory
-[2024-11-20 13:42:52] [INFO] Received message from '[32mayo8[0m': wdwd
-[2024-11-20 13:42:52] [INFO] Received message from '[32mayo8[0m': wd
-[2024-11-20 13:42:56] [INFO] Received message from '[31mayman1[0m': dw
-[2024-11-20 13:43:13] [INFO] Client '[31mayman1[0m' disconnected (EOF).
-[2024-11-20 13:43:13] [INFO] Client '[31mayman1[0m' disconnected.
-[2024-11-20 13:43:23] [ERROR] Error reading from client '[32mayo8[0m': read tcp 127.0.0.1:8989->127.0.0.1:32868: use of closed network connection
-[2024-11-20 13:43:23] [INFO] Server sent shutdown message to all clients.
-[2024-11-20 13:43:23] [INFO] Client '[32mayo8[0m' disconnected.
-[2024-11-20 13:43:23] [INFO] Successfully removed file: ./internal/db/clients
-[2024-11-20 13:43:23] [INFO] Successfully removed file: ./internal/db/archived_msgs
-[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
-[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
-[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
-[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
-[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
-[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
-[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
-[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
-[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
-[2024-11-20 13:47:55] [INFO] Server sent shutdown message to all clients.
-[2024-11-20 13:47:55] [ERROR] Failed to remove file './internal/db/clients': remove ./internal/db/clients: no such file or directory
-[2024-11-20 13:47:55] [ERROR] Failed to remove file './internal/db/archived_msgs': remove ./internal/db/archived_msgs: no such file or directory
-[2024-11-20 13:47:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
-[2024-11-20 13:47:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 14:52:32] [ERROR] Error reading from client '[31mayman[0m': read tcp 127.0.0.1:8989->127.0.0.1:38510: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Error reading from client '[32mdwdwwd[0m': read tcp 127.0.0.1:8989->127.0.0.1:58366: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Error reading from client '[33m84dw[0m': read tcp 127.0.0.1:8989->127.0.0.1:37830: use of closed network connection
+[2024-11-20 14:52:32] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 14:52:32] [ERROR] Failed to remove file './internal/db/clients': remove ./internal/db/clients: no such file or directory
+[2024-11-20 14:52:32] [ERROR] Failed to remove file './internal/db/archived_msgs': remove ./internal/db/archived_msgs: no such file or directory
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] write tcp 127.0.0.1:8989->127.0.0.1:58366: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] write tcp 127.0.0.1:8989->127.0.0.1:58366: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] write tcp 127.0.0.1:8989->127.0.0.1:37830: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] write tcp 127.0.0.1:8989->127.0.0.1:37830: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [INFO] Client '[31mayman[0m' disconnected.
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] write tcp 127.0.0.1:8989->127.0.0.1:37830: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] write tcp 127.0.0.1:8989->127.0.0.1:37830: use of closed network connection
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [INFO] Client '[32mdwdwwd[0m' disconnected.
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:32] [INFO] Client '[33m84dw[0m' disconnected.
+[2024-11-20 14:52:32] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:33] [ERROR] Failed to create file: open ./internal/db/clients: permission denied
+[2024-11-20 14:52:33] [ERROR] Failed to create file: open ./internal/db/archived_msgs: permission denied
+[2024-11-20 14:52:45] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 14:52:45] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 14:52:45] [ERROR] Failed to remove file './internal/db/clients': remove ./internal/db/clients: no such file or directory
+[2024-11-20 14:52:45] [ERROR] Failed to remove file './internal/db/archived_msgs': remove ./internal/db/archived_msgs: no such file or directory
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:52:45] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:53:38] [ERROR] Failed to create file: open ./internal/db/clients: permission denied
+[2024-11-20 14:53:38] [ERROR] Failed to create file: open ./internal/db/archived_msgs: permission denied
+[2024-11-20 14:53:52] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 14:53:52] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 14:53:52] [ERROR] Failed to remove file './internal/db/clients': remove ./internal/db/clients: no such file or directory
+[2024-11-20 14:53:52] [ERROR] Failed to remove file './internal/db/archived_msgs': remove ./internal/db/archived_msgs: no such file or directory
+[2024-11-20 14:53:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:53:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:53:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:53:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:53:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:53:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:53:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:53:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:53:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:53:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:53:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:15] [ERROR] Failed to create file: open ./internal/db/clients: permission denied
+[2024-11-20 14:54:15] [ERROR] Failed to create file: open ./internal/db/archived_msgs: permission denied
+[2024-11-20 14:54:17] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 14:54:17] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 14:54:17] [ERROR] Failed to remove file './internal/db/clients': remove ./internal/db/clients: no such file or directory
+[2024-11-20 14:54:17] [ERROR] Failed to remove file './internal/db/archived_msgs': remove ./internal/db/archived_msgs: no such file or directory
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:54:17] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:47] [ERROR] Failed to create file: open ./internal/db/clients: permission denied
+[2024-11-20 14:58:47] [ERROR] Failed to create file: open ./internal/db/archived_msgs: permission denied
+[2024-11-20 14:58:52] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 14:58:52] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:58:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:46] [ERROR] Failed to create file: open ./internal/db/clients: permission denied
+[2024-11-20 14:59:46] [ERROR] Failed to create file: open ./internal/db/archived_msgs: permission denied
+[2024-11-20 14:59:55] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 14:59:55] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 14:59:55] [ERROR] Failed to create dir: remove ./internal/db: no such file or directory
+[2024-11-20 14:59:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed to create file: open ./internal/db/clients: permission denied
+[2024-11-20 14:59:56] [ERROR] Failed to create file: open ./internal/db/archived_msgs: permission denied
+[2024-11-20 14:59:56] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 14:59:56] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 14:59:56] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:05] [ERROR] Failed to create file: open ./internal/db/clients: permission denied
+[2024-11-20 15:00:05] [ERROR] Failed to create file: open ./internal/db/archived_msgs: permission denied
+[2024-11-20 15:00:08] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:00:08] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:18] [ERROR] Failed to create file: open ./internal/db/clients: permission denied
+[2024-11-20 15:00:18] [ERROR] Failed to create file: open ./internal/db/archived_msgs: permission denied
+[2024-11-20 15:00:57] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:00:57] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:00:57] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:57] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:57] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:00:57] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:02:59] [ERROR] Failed to create file: open ./internal/db/clients: permission denied
+[2024-11-20 15:02:59] [ERROR] Failed to create file: open ./internal/db/archived_msgs: permission denied
+[2024-11-20 15:03:13] Error starting server: listen tcp 127.0.0.1:8989: bind: address already in use
+[2024-11-20 15:03:25] Error starting server: listen tcp 127.0.0.1:8989: bind: address already in use
+[2024-11-20 15:03:45] [ERROR] Failed to create file: open ./internal/db/clients: permission denied
+[2024-11-20 15:03:45] [ERROR] Failed to create file: open ./internal/db/archived_msgs: permission denied
+[2024-11-20 15:03:52] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:03:52] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:03:52] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:05:00] [ERROR] Failed to create file: open ./internal/db/clients: permission denied
+[2024-11-20 15:05:00] [ERROR] Failed to create file: open ./internal/db/archived_msgs: permission denied
+[2024-11-20 15:05:46] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:05:46] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:05:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:05:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:05:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:05:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:05:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:05:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:05:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:05:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:05:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:05:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:05:59] [ERROR] Failed to open file './internal/db/clients': open ./internal/db/clients: permission denied
+
+[2024-11-20 15:06:08] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:06:08] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:06:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:08] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:39] [ERROR] Failed to open file './internal/db/clients': open ./internal/db/clients: permission denied
+
+[2024-11-20 15:06:51] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:06:51] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:06:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:06:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:02] [ERROR] Failed to open file './internal/db/clients': open ./internal/db/clients: permission denied
+
+[2024-11-20 15:07:46] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:07:46] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:46] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:47] [ERROR] Failed to open file './internal/db/clients': open ./internal/db/clients: permission denied
+
+[2024-11-20 15:07:54] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:07:54] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:07:54] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:02] [ERROR] Failed to create dir: chdir ./internal/db: permission denied
+[2024-11-20 15:10:13] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:10:13] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:10:13] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:13] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:13] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:13] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:13] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:17] [ERROR] Failed to create dir: chdir ./internal/db: permission denied
+[2024-11-20 15:10:55] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:10:55] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:10:56] [ERROR] Failed to open file './internal/db/clients': open ./internal/db/clients: permission denied
+
+[2024-11-20 15:11:06] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:11:06] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:11:06] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:06] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:06] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:06] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:06] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:06] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:11:37] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:11:37] [ERROR] Failed to create dir: remove ./internal/db: directory not empty
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:11:40] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:11:40] [ERROR] Failed to create dir: remove ./internal/db: directory not empty
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:11:40] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:12:04] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:12:04] [ERROR] Failed to create dir: remove ./internal/db: directory not empty
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:04] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:12:11] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:12:11] [ERROR] Failed to create dir: remove ./internal/db/: directory not empty
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:11] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:12:55] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:12:55] [ERROR] Failed to create dir: remove ./internal/db/*: no such file or directory
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:12:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:15:51] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:15:51] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:15:51] [ERROR] Failed to create dir: remove ./internal/db/*: no such file or directory
+[2024-11-20 15:15:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:15:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:15:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:15:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:15:51] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:16:00] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:00] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:16:37] [ERROR] Error reading from client '[31mwdwd[0m': read tcp 127.0.0.1:8989->127.0.0.1:54316: use of closed network connection
+[2024-11-20 15:16:37] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:16:37] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:17:44] [ERROR] Error reading from client '[31mwfwf[0m': read tcp 127.0.0.1:8989->127.0.0.1:47650: use of closed network connection
+[2024-11-20 15:17:44] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:17:44] [INFO] Client '[31mwfwf[0m' disconnected.
+[2024-11-20 15:17:44] [ERROR] Failed to open file './internal/db/clients': open ./internal/db/clients: no such file or directory
+
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:17:44] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:19:48] [INFO] Received message from '[31mayman[0m': fefw
+[2024-11-20 15:19:48] [INFO] Received message from '[31mayman[0m': fw
+[2024-11-20 15:19:49] [INFO] Received message from '[31mayman[0m': fw
+[2024-11-20 15:19:49] [INFO] Received message from '[31mayman[0m': fw
+[2024-11-20 15:19:50] [INFO] Received message from '[31mayman[0m': cv
+[2024-11-20 15:19:50] [INFO] Received message from '[31mayman[0m': fc\w
+[2024-11-20 15:19:58] [INFO] Client '[32mfwf[0m' disconnected (EOF).
+[2024-11-20 15:19:58] [INFO] Client '[32mfwf[0m' disconnected.
+[2024-11-20 15:19:58] [ERROR] Failed to open file 'internal/logs/logs/log': open internal/logs/logs/log: no such file or directory
+
+[2024-11-20 15:19:58] [ERROR] Error reading from client '[31mayman[0m': read tcp 127.0.0.1:8989->127.0.0.1:57436: use of closed network connection
+[2024-11-20 15:19:58] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 15:19:58] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:19:58] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:19:58] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:19:58] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:19:58] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:19:58] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 15:19:58] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection

@@ -10,8 +10,14 @@ import (
 	"TCPChat/internal/utils"
 )
 
-func StartSupervisor(shutdownChan chan struct{}, listener net.Listener, filesToRemove []string) {
+func StartSupervisor(listener net.Listener) {
+	files := []string{
+		"./internal/db/clients",
+		"./internal/db/archived_msgs",
+	}
+	Createdb(files)
 	signalChan := make(chan os.Signal, 1)
+
 	// os.Interrupt represents ctrl+c
 	// syscall.SIGTERM sent by the os or other processes to request program termination
 	signal.Notify(signalChan, os.Interrupt, syscall.SIGTERM)
@@ -19,17 +25,16 @@ func StartSupervisor(shutdownChan chan struct{}, listener net.Listener, filesToR
 	go func() {
 		<-signalChan
 
-		logErr:= fmt.Errorf("\n[INFO] Server shutting down...")
+		logErr := fmt.Errorf("\n[INFO] Server shutting down... ")
 		utils.Save("internal/logs/logs/log", logErr.Error(), true)
 
 		sendExitMessageToClients()
 
-		removeFiles(filesToRemove)
+		removedb(files)
 
 		if listener != nil {
 			listener.Close()
 		}
-		close(shutdownChan)
 		os.Exit(0)
 	}()
 }
@@ -43,23 +48,35 @@ func sendExitMessageToClients() {
 		_, err := clientConn.Write([]byte(exitMessage))
 		if err != nil {
 			logErr := fmt.Errorf("[ERROR] Failed to send shutdown message to client: %v", err)
-			utils.Save("./internal/logs/logs.log", logErr.Error() , true)
+			utils.Save("./internal/logs/logs.log", logErr.Error(), true)
 		}
 		clientConn.Close()
 	}
 	fmt.Errorf("[INFO] Server sent shutdown message to all clients.")
-	utils.Save("./internal/logs/logs.log", "[INFO] Server sent shutdown message to all clients.", true )
+	utils.Save("./internal/logs/logs.log", "[INFO] Server sent shutdown message to all clients.", true)
 }
 
-func removeFiles(files []string) {
-	for _, file := range files {
-		err := os.Remove(file)
+func Createdb(files []string) {
+	if err := os.MkdirAll("./internal/db", 0o777); err != nil {
+		fmt.Errorf("[ERROR] Failed to create dir: %v", err)
+		utils.Save("./internal/logs/logs.log", "[ERROR] Failed to create dir: "+err.Error(), true)
+
+	}
+	for _, filename := range files {
+		file, err := os.OpenFile(filename, os.O_CREATE|os.O_WRONLY, 0o777)
 		if err != nil {
-			logErr := fmt.Errorf("[ERROR] Failed to remove file '%s': %v", file, err)
-			utils.Save("./internal/logs/logs.log",logErr.Error(), true)
-		} else {
-			logErr := fmt.Errorf("[INFO] Successfully removed file: %s", file)
-			utils.Save("./internal/logs/logs.log", logErr.Error(), true)
+			fmt.Println("[ERROR] Failed to open file '%s': %v\n", filename, err)
+			utils.Save("./internal/logs/logs.log", "[ERROR] Failed to open file '"+filename+"': "+err.Error()+"\n", true)
+			return
 		}
+		defer file.Close()
+	}
+}
+
+func removedb(files []string) {
+	err := os.RemoveAll("./internal/db/")
+	if err != nil {
+		logErr := fmt.Errorf("[ERROR] Failed to remove db", err)
+		utils.Save("./internal/logs/logs.log", logErr.Error()+"\n", true)
 	}
 }
