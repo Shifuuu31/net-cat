@@ -13,7 +13,6 @@ import (
 
 var (
 	Clients    = make(map[net.Conn]string)
-	Messages   = []string{}
 	Mutex      = &sync.Mutex{}
 	MaxClients = 10
 	portHelp   = `
@@ -38,32 +37,14 @@ Allowed Ports
 `
 )
 
-func Run() {
-	listener := startupServer()
-	for {
-		clientConn, err := listener.Accept()
-		if err != nil {
-			log.Println("Error accepting connection:", err)
-			continue
-		}
-
-		if len(Clients) >= MaxClients {
-			clientConn.Write([]byte("Max clients reached. Connection rejected.\n"))
-			clientConn.Close()
-			continue
-		}
-
-		go HandleClient(clientConn)
-	}
-}
-
 func getPort() string {
 	if len(os.Args) == 2 {
 		pt, err := strconv.Atoi(os.Args[1])
 		if err != nil || pt < 1024 || pt > 49151 {
-			fmt.Println("Invalid port")
+			utils.Save("./internal/logs/logs.log", fmt.Sprintf("[ERROR] Invalid port '%s': %v", os.Args[1], err), true)
+			fmt.Println("[ERROR] Invalid port number. Use a registered port (1024–49151).")
 			fmt.Println(portHelp)
-			os.Exit(0)
+			os.Exit(1)
 		}
 		return os.Args[1]
 	}
@@ -73,16 +54,60 @@ func getPort() string {
 func startupServer() net.Listener {
 	if len(os.Args) > 2 {
 		fmt.Println("[USAGE]: ./TCPChat $port")
-		os.Exit(1)
+		os.Exit(0)
 	}
 
 	port := getPort()
 
 	listener, err := net.Listen("tcp", "localhost:"+port)
 	if err != nil {
+		// utils.Save("./internal/logs/logs.log", "Error starting server: "+ err.Error())
 		log.Fatalf("Error starting server: %v", err)
 	}
 
 	utils.PrintBanner(port)
 	return listener
+}
+
+
+
+func Run() {
+	listener := startupServer()
+
+	// Channel to signal shutdown
+	shutdownChan := make(chan struct{})
+	filesToRemove := []string{
+		"./internal/db/clients",
+		"./internal/db/archived_msgs",
+	}
+
+	StartSupervisor(shutdownChan, listener, filesToRemove)
+
+	for {
+		clientConn, err := listener.Accept()
+		select {
+		case <-shutdownChan:
+			return
+		default:
+			if err != nil {
+				logErr := fmt.Errorf("[ERROR] Failed accepting connection: %v", err)
+				utils.Save("./internal/logs/logs.log", logErr.Error(), true)
+				continue
+			}
+	
+			Mutex.Lock()
+			clientCount := len(Clients)
+			Mutex.Unlock()
+	
+			if clientCount >= MaxClients {
+				rejectMsg := "Max clients reached. Connection rejected.\n"
+				clientConn.Write([]byte(rejectMsg))
+				utils.Save("./internal/logs/logs.log", "[INFO] Rejected connection: Max clients reached.", true)
+				clientConn.Close()
+				continue
+			}
+
+			go HandleClient(clientConn)
+		}
+	}
 }

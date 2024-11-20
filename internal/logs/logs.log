@@ -1,0 +1,21 @@
+[2024-11-20 13:42:22] [ERROR] Failed to open file: open ./internal/db/archived_msgs: no such file or directory
+[2024-11-20 13:42:42] [ERROR] Failed to open file: open ./internal/db/archived_msgs: no such file or directory
+[2024-11-20 13:42:52] [INFO] Received message from '[32mayo8[0m': wdwd
+[2024-11-20 13:42:52] [INFO] Received message from '[32mayo8[0m': wd
+[2024-11-20 13:42:56] [INFO] Received message from '[31mayman1[0m': dw
+[2024-11-20 13:43:13] [INFO] Client '[31mayman1[0m' disconnected (EOF).
+[2024-11-20 13:43:13] [INFO] Client '[31mayman1[0m' disconnected.
+[2024-11-20 13:43:23] [ERROR] Error reading from client '[32mayo8[0m': read tcp 127.0.0.1:8989->127.0.0.1:32868: use of closed network connection
+[2024-11-20 13:43:23] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 13:43:23] [INFO] Client '[32mayo8[0m' disconnected.
+[2024-11-20 13:43:23] [INFO] Successfully removed file: ./internal/db/clients
+[2024-11-20 13:43:23] [INFO] Successfully removed file: ./internal/db/archived_msgs
+[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
