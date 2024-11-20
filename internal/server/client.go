@@ -73,7 +73,7 @@ func GetClientName(clientConn net.Conn) string {
 
 		name := strings.TrimSpace(string(buf[:n]))
 		if !isValidName(name) {
-			clientConn.Write([]byte("Invalid name. Alphanumeric characters only (min length: 3).\n"))
+			clientConn.Write([]byte("Invalid name. Alpha/Numeric characters only (min length: 3).\n"))
 			continue
 		}
 		if isClientNameExists(name) {
