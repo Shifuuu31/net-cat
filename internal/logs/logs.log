@@ -19,3 +19,8 @@
 [2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
 [2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
 [2024-11-20 13:43:23] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 13:47:55] [INFO] Server sent shutdown message to all clients.
+[2024-11-20 13:47:55] [ERROR] Failed to remove file './internal/db/clients': remove ./internal/db/clients: no such file or directory
+[2024-11-20 13:47:55] [ERROR] Failed to remove file './internal/db/archived_msgs': remove ./internal/db/archived_msgs: no such file or directory
+[2024-11-20 13:47:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection
+[2024-11-20 13:47:55] [ERROR] Failed accepting connection: accept tcp 127.0.0.1:8989: use of closed network connection

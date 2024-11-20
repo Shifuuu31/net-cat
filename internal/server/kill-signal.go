@@ -12,12 +12,15 @@ import (
 
 func StartSupervisor(shutdownChan chan struct{}, listener net.Listener, filesToRemove []string) {
 	signalChan := make(chan os.Signal, 1)
+	// os.Interrupt represents ctrl+c
+	// syscall.SIGTERM sent by the os or other processes to request program termination
 	signal.Notify(signalChan, os.Interrupt, syscall.SIGTERM)
 
 	go func() {
 		<-signalChan
 
-		fmt.Println("\n[INFO] Server shutting down...")
+		logErr:= fmt.Errorf("\n[INFO] Server shutting down...")
+		utils.Save("internal/logs/logs/log", logErr.Error(), true)
 
 		sendExitMessageToClients()
 
